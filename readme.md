@@ -26,3 +26,13 @@ npm run dev
 
 # Now you can browse to localhost:8080
 ```
+
+## A little more info
+
+The images are stored in a MongoDB collection named `Files`. The data is encoded as 
+base64 data, as it is very easy and quick to do.
+There are a number of reasons why you shouldn't do this in production (or 
+anywhere for that matter). It is slow, there are file size limitations (16MB for 
+a MongoDB record I believe) and base64 is ~33% larger than binary.
+
+So please, be aware this is for demonstration purposes only!
